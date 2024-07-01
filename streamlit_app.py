@@ -12,7 +12,9 @@ dateEnd = st.text_input('Date/Time End: ')
 opName = st.text_input('Operator Name: ')
 comments = st.text_input('Comments: ')
 
-if st.button('Save'):
+click = st.button('Save')
+
+if click:
     with open('Z:\\Public\\BulkLoadingLog\\Bulk_Loading_Log.csv', 'a', newline='') as fd:
         fd.writelines(carNum + ',' + compNum + ',' + blendNum + ',' + siloNum + ','
                     + dateStart + ',' + dateEnd + ',' + opName + ',' + comments + '\n')
