@@ -15,6 +15,7 @@ comments = st.text_input('Comments: ')
 click = st.button('Save')
 
 if click:
+    st.button("success")
     with open('Z:\\Public\\BulkLoadingLog\\Bulk_Loading_Log.csv', 'a', newline='') as fd:
         fd.writelines(carNum + ',' + compNum + ',' + blendNum + ',' + siloNum + ','
                     + dateStart + ',' + dateEnd + ',' + opName + ',' + comments + '\n')
